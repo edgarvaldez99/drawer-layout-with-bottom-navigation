@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.bottom_navigation_view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         setupNavController()
         setupDrawerNavigation()
+        setupBottomNavigation()
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -43,5 +45,20 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         nav_view.setupWithNavController(navController)
+    }
+
+    private fun setupBottomNavigation() {
+        nav_home_button.setOnClickListener {
+            navController.navigate(R.id.nav_home)
+        }
+        nav_gallery_button.setOnClickListener {
+            navController.navigate(R.id.nav_gallery)
+        }
+        nav_slideshow_button.setOnClickListener {
+            navController.navigate(R.id.nav_slideshow)
+        }
+        nav_tools_button.setOnClickListener {
+            navController.navigate(R.id.nav_tools)
+        }
     }
 }

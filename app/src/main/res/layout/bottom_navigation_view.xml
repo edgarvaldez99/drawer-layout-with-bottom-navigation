@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <RadioButton
+        android:id="@+id/nav_home_button"
+        android:checked="true"
+        android:text="@string/menu_home"
+        style="@style/AppTheme.RadioButtonLikeBottomNavigationView">
+
+    </RadioButton>
+
+    <RadioButton
+        android:id="@+id/nav_gallery_button"
+        android:text="@string/menu_gallery"
+        style="@style/AppTheme.RadioButtonLikeBottomNavigationView">
+
+    </RadioButton>
+
+    <RadioButton
+        android:id="@+id/nav_slideshow_button"
+        android:text="@string/menu_slideshow"
+        style="@style/AppTheme.RadioButtonLikeBottomNavigationView">
+
+    </RadioButton>
+
+    <RadioButton
+        android:id="@+id/nav_tools_button"
+        android:text="@string/menu_tools"
+        style="@style/AppTheme.RadioButtonLikeBottomNavigationView">
+
+    </RadioButton>
+
+</RadioGroup>
